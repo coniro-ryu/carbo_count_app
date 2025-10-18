@@ -2,7 +2,7 @@ import math
 
 import streamlit as st
 
-st.title("簡易カーボカウント")
+st.title("Quick Carbo")
 
 # --- dict ---
 time_dict = {"朝": 30, "昼": 30, "夜": 40}
@@ -50,3 +50,4 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
