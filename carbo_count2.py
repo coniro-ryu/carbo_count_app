@@ -40,14 +40,14 @@ total = (sugar_weight / carbo) + (premeal - target) / isf
 total_trunc = math.floor(total * 100) / 100
 
 # --- 結果表示 ---
-st.markdown("### 結果")
-st.markdown(
-    f"""
-    <div style='font-size:22px; line-height:2'>
-        <strong>糖質量(g)：</strong> <span style='color:green; font-size:30px'><strong>{sugar_weight:.0f}</strong></span><br>
-        <strong>注入量(U)：</strong> <span style='color:blue; font-size:30px'><strong>{total_trunc:.2f}</strong></span>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
+if st.button("計算する"):
+    st.markdown("### 結果")
+    st.markdown(
+        f"""
+        <div style='font-size:22px; line-height:2'>
+            <strong>糖質量(g)：</strong> <span style='color:green; font-size:30px'><strong>{sugar_weight:.0f}</strong></span><br>
+            <strong>注入量(U)：</strong> <span style='color:blue; font-size:30px'><strong>{total_trunc:.2f}</strong></span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
